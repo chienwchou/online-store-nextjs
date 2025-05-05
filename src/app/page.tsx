@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full">
       {/* Top navigation bar */}
-      <div className="bg-red-900 text-white py-2 px-4 flex justify-between items-center flex-wrap">
+      <div className="bg-red-900 text-white p-4 flex justify-between items-center flex-wrap">
         <div className="flex space-x-6 text-sm md:text-base">
           <span className="cursor-pointer">About Us</span>
           <span className="cursor-pointer">Customer Support</span>
@@ -31,7 +31,7 @@ export default function Home() {
           <input 
             type="text" 
             placeholder="Search a product e.g. milk" 
-            className="w-full py-1 md:py-2 px-4 rounded-full text-black"
+            className="w-full py-1 md:py-2 px-4 rounded-full text-black placeholder-white"
           />
           <div className="absolute right-0 top-0 bg-gray-200 h-full rounded-r-full flex items-center px-4">
             <Search size={20} className="text-gray-600" />
