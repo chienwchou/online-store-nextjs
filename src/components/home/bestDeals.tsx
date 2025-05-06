@@ -1,8 +1,21 @@
-import { useState } from 'react';
+import { JSX, useState } from 'react';
 import { ChevronLeft, ChevronRight, Minus, Plus, ShoppingBag, ShoppingCart, Truck, MapPin, Headphones, Smartphone } from 'lucide-react';
 
-export default function GroceryDeals() {
-  const [quantities, setQuantities] = useState({
+// Define TypeScript interfaces
+interface Product {
+  id: string;
+  name: string;
+  image: string;
+  originalPrice: number | null;
+  price: number;
+}
+
+interface QuantityState {
+  [key: string]: number;
+}
+
+export default function GroceryDeals(): JSX.Element {
+  const [quantities, setQuantities] = useState<QuantityState>({
     handCream: 1,
     herbalTea: 1,
     strawberries: 1,
@@ -10,17 +23,17 @@ export default function GroceryDeals() {
     chicken: 1
   });
 
-  const incrementQuantity = (item) => {
+  const incrementQuantity = (item: string): void => {
     setQuantities(prev => ({ ...prev, [item]: prev[item] + 1 }));
   };
 
-  const decrementQuantity = (item) => {
+  const decrementQuantity = (item: string): void => {
     if (quantities[item] > 1) {
       setQuantities(prev => ({ ...prev, [item]: prev[item] - 1 }));
     }
   };
 
-  const products = [
+  const products: Product[] = [
     {
       id: 'handCream',
       name: 'Hand Cream',
