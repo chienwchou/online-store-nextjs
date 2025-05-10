@@ -56,7 +56,7 @@ const PromoBanner: React.FC<PromoBannerProps> = ({
 
 export default function PromotionalBanners() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="mx-auto px-20 py-8 mb-10">
       <div className="flex flex-col md:flex-row gap-4 md:gap-6">
         <PromoBanner
           subtitle="It's Wine O'Clock!"

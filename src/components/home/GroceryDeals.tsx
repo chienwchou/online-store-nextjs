@@ -72,9 +72,9 @@ export default function GroceryDeals(): JSX.Element {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="mx-auto px-20 py-8">
       {/* Service Banner */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 border-b pb-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 border-b pb-6 mb-8 mx-auto">
         <div className="flex items-center gap-3">
           <div className="text-red-600">
             <Truck className="w-10 h-10" />
@@ -120,7 +120,7 @@ export default function GroceryDeals(): JSX.Element {
       <h2 className="text-3xl font-bold mb-6">Best Deals</h2>
       
       <div className="relative">
-        <div className="flex overflow-x-auto pb-4 gap-4 scrollbar-hide">
+        <div className="flex overflow-x-auto pb-4 gap-4 justify-center">
           {products.map((product) => (
             <div key={product.id} className="min-w-[240px] border rounded-md p-4 flex flex-col">
               <div className="relative">
@@ -171,10 +171,10 @@ export default function GroceryDeals(): JSX.Element {
         </div>
         
         {/* Navigation Arrows */}
-        <button className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-2 rounded-full hidden md:block">
+        <button className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full hidden md:block">
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <button className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-2 rounded-full hidden md:block">
+        <button className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full hidden md:block">
           <ChevronRight className="w-6 h-6" />
         </button>
       </div>
