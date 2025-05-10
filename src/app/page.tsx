@@ -1,5 +1,6 @@
 "use client";
-import GroceryDeals from '@/components/home/bestDeals';
+import GroceryDeals from '@/components/home/GroceryDeals';
+import PromotionalBanners from '@/components/home/PromoBanner';
 import { Search, User, Heart, MapPin, ShoppingCart, Menu, X } from 'lucide-react';
 import { useState } from "react";
 
@@ -111,6 +112,7 @@ export default function Home() {
         </div>
       </div>
       <GroceryDeals />
+      <PromotionalBanners />
     </>
   );
 }
