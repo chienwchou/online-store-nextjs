@@ -7,7 +7,7 @@ import googleplay from '@/assets/icons/googleplay.jpg';
 const MobileBanner = () => {
     return (
         <section>
-            <div className="flex flex-col md:flex-row px-20 py-10 gap-5 mb-10 bg-no-repeat bg-cover bg-[80%] md:bg-center
+            <div className="flex flex-col md:flex-row px-20 py-10 gap-5 mb-10 bg-no-repeat bg-cover justify-center md:bg-center
 "
             style={{
                 backgroundImage: `url(`+MobileAppImageBg.src+`)`,

@@ -122,7 +122,7 @@ export default function GroceryDeals(): JSX.Element {
       <div className="relative">
         <div className="flex overflow-x-auto pb-4 gap-4 justify-center">
           {products.map((product) => (
-            <div key={product.id} className="min-w-[240px] border rounded-md p-4 flex flex-col">
+            <div key={product.id} className="w-96 border rounded-md p-4 flex flex-col">
               <div className="relative">
                 <div className="bg-red-600 text-white text-sm py-1 px-3 rounded-full absolute top-0 left-0">
                   Best Deal

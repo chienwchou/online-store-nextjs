@@ -1,4 +1,5 @@
 "use client";
+import Footer from '@/components/home/common/Footer';
 import GroceryDeals from '@/components/home/GroceryDeals';
 import MobileBanner from '@/components/home/MobileBanner';
 import PromotionalBanners from '@/components/home/PromoBanner';
@@ -115,6 +116,7 @@ export default function Home() {
       <GroceryDeals />
       <PromotionalBanners />
       <MobileBanner />
+      <Footer />
     </>
   );
 }
