@@ -1,5 +1,5 @@
 "use client";
-import Footer from "@/components/home/common/Footer";
+import Footer from "@/components/common/Footer";
 import GroceryDeals from "@/components/home/GroceryDeals";
 import MobileBanner from "@/components/home/MobileBanner";
 import PromotionalBanners from "@/components/home/PromoBanner";
@@ -110,7 +110,7 @@ export default function Home() {
 
         {/* Hero banner */}
         <div className="bg-amber-50 py-6 md:py-12 px-4 md:px-8 flex flex-col md:flex-row items-center justify-center">
-          <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+          <div className="w-full md:w-1/3 flex justify-center items-center md:justify-end px-10">
             <Image
               src={freshBread}
               alt="Fresh flatbread"
@@ -136,7 +136,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+          <div className="w-full md:w-1/3 flex justify-center items-center md:justify-end">
             <Image
               src={freshBagel}
               alt="Fresh bread and baked goods"
