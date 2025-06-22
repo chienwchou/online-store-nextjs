@@ -1,135 +1,104 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+"use client";
+import React, { useState } from "react";
+import {
+  Search,
+  User,
+  Heart,
+  MapPin,
+  ShoppingCart,
+  Menu,
+  X,
+} from "lucide-react";
 
 const Header: React.FC = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <section className="bg-red-600 text-white">
-      <div className="container mx-auto px-4 py-8">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Help Section */}
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Clovers.</h2>
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Need Help?</h3>
-              <p className="mb-1">
-                Visit our <Link href="/support" className="underline">Customer Support</Link>
-              </p>
-              <p className="mb-4">for assistance or call us at</p>
-              <p className="text-xl font-bold">123-456-7890</p>
-            </div>
-            <div className="flex space-x-4">
-              <Link href="#" aria-label="Facebook">
-                <Facebook size={24} />
-              </Link>
-              <Link href="#" aria-label="Instagram">
-                <Instagram size={24} />
-              </Link>
-              <Link href="#" aria-label="Twitter">
-                <Twitter size={24} />
-              </Link>
-              <Link href="#" aria-label="Youtube">
-                <Youtube size={24} />
-              </Link>
+    <section className="bg-red-600 text-black">
+      <div className="flex flex-col w-full">
+        {/* Top navigation bar */}
+        <div className="bg-red-900 text-white p-4 flex justify-between items-center flex-wrap">
+          <div className="flex space-x-6 text-sm md:text-base">
+            <span className="cursor-pointer">About Us</span>
+            <span className="cursor-pointer">Customer Support</span>
+          </div>
+          <div className="hidden md:flex items-center text-sm">
+            <span>Shop on the go, download our app.</span>
+            <span className="ml-2 underline cursor-pointer">Details</span>
+          </div>
+          <div className="flex items-center text-sm md:text-base">
+            <User className="mr-2" size={18} />
+            <span className="cursor-pointer">Log in</span>
+          </div>
+        </div>
+
+        {/* Main header with search */}
+        <div className="bg-red-600 text-white py-3 px-4 md:py-4 md:px-6 flex justify-between items-center">
+          <h1 className="text-2xl md:text-3xl font-bold">FreshMart.</h1>
+
+          <div className="hidden md:block relative w-1/3 mx-4">
+            <input
+              type="text"
+              placeholder="Search a product e.g. milk"
+              className="w-full py-1 md:py-2 px-4 rounded-full text-black placeholder-white"
+            />
+            <div className="absolute right-0 top-0 bg-gray-200 h-full rounded-r-full flex items-center px-4">
+              <Search size={20} className="text-gray-600" />
             </div>
           </div>
 
-          {/* Menu Section */}
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Menu</h3>
-            <ul className="space-y-2">
-              <li><Link href="/deals">Deals</Link></li>
-              <li><Link href="/food">Food</Link></li>
-              <li><Link href="/beverages">Beverages</Link></li>
-              <li><Link href="/household">Household</Link></li>
-              <li><Link href="/personal-care">Personal Care</Link></li>
-              <li><Link href="/my-orders">My Orders</Link></li>
-            </ul>
-          </div>
-
-          {/* Categories Section */}
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Categories</h3>
-            <ul className="space-y-2">
-              <li><Link href="/vegetables">Vegetables</Link></li>
-              <li><Link href="/bakery">Bakery</Link></li>
-              <li><Link href="/wine">Wine</Link></li>
-              <li><Link href="/dairy-eggs">Dairy & Eggs</Link></li>
-              <li><Link href="/meat-poultry">Meat & Poultry</Link></li>
-              <li><Link href="/soft-drinks">Soft Drinks</Link></li>
-              <li><Link href="/cleaning-supplies">Cleaning Supplies</Link></li>
-              <li><Link href="/cereal-snacks">Cereal & Snacks</Link></li>
-            </ul>
-          </div>
-
-          {/* Info Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Info</h3>
-              <ul className="space-y-2">
-                <li><Link href="/faq">FAQ</Link></li>
-                <li><Link href="/about">About Us</Link></li>
-                <li><Link href="/support">Customer Support</Link></li>
-                <li><Link href="/locations">Locations</Link></li>
-              </ul>
-            </div>
-
-            {/* My Choice Section */}
-            <div>
-              <h3 className="text-xl font-semibold mb-4">My Choice</h3>
-              <ul className="space-y-2">
-                <li><Link href="/favorites">Favorites</Link></li>
-                <li><Link href="/my-orders">My Orders</Link></li>
-              </ul>
+          <div className="flex space-x-3 md:space-x-6 items-center">
+            <button
+              className="md:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+            <MapPin size={22} className="hidden sm:block" />
+            <Heart size={22} />
+            <div className="flex items-center">
+              <ShoppingCart size={22} />
+              <span className="bg-white text-red-600 rounded-full h-5 w-5 md:h-6 md:w-6 flex items-center justify-center ml-1 text-xs md:text-sm">
+                0
+              </span>
             </div>
           </div>
         </div>
 
-        {/* Horizontal line */}
-        <div className="border-t border-red-500 my-8"></div>
-
-        {/* Footer Bottom */}
-        <div className="text-center">
-          {/* Policy Links */}
-          <div className="flex justify-center space-x-6 mb-8">
-            <Link href="/shipping-returns" className="underline">Shipping & Returns</Link>
-            <Link href="/terms" className="underline">Terms & Conditions</Link>
-            <Link href="/payment" className="underline">Payment Methods</Link>
+        {/* Mobile search bar */}
+        <div className="md:hidden relative px-4 py-2 bg-red-600">
+          <input
+            type="text"
+            placeholder="Search a product e.g. milk"
+            className="w-full py-1 px-4 rounded-full text-black"
+          />
+          <div className="absolute right-4 top-2 bg-gray-200 h-8 rounded-r-full flex items-center px-3">
+            <Search size={18} className="text-gray-600" />
           </div>
+        </div>
 
-          {/* Payment Methods */}
-          <div>
-            <h3 className="text-xl mb-6">We accept the following payment methods</h3>
-            <div className="flex justify-center flex-wrap gap-4">
-              {/* Payment Icons */}
-              <div className="bg-white p-2 rounded">
-                <Image src="/mastercard.png" alt="Mastercard" width={40} height={24} className="h-6 w-auto" />
-              </div>
-              <div className="bg-white p-2 rounded">
-                <Image src="/amex.png" alt="American Express" width={40} height={24} className="h-6 w-auto" />
-              </div>
-              <div className="bg-white p-2 rounded">
-                <Image src="/unionpay.png" alt="UnionPay" width={40} height={24} className="h-6 w-auto" />
-              </div>
-              <div className="bg-white p-2 rounded">
-                <Image src="/jcb.png" alt="JCB" width={40} height={24} className="h-6 w-auto" />
-              </div>
-              <div className="bg-white p-2 rounded">
-                <Image src="/discover.png" alt="Discover" width={40} height={24} className="h-6 w-auto" />
-              </div>
-              <div className="bg-white p-2 rounded">
-                <Image src="/visa.png" alt="Visa" width={40} height={24} className="h-6 w-auto" />
-              </div>
-              <div className="bg-white p-2 rounded">
-                <Image src="/paypal.png" alt="PayPal" width={40} height={24} className="h-6 w-auto" />
-              </div>
-              <div className="bg-white p-2 rounded">
-                <Image src="/diners.png" alt="Diners Club" width={40} height={24} className="h-6 w-auto" />
-              </div>
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-b py-2">
+            <div className="flex flex-col px-4">
+              <span className="py-2 border-b">Deals</span>
+              <span className="py-2 border-b">Food</span>
+              <span className="py-2 border-b">Beverages</span>
+              <span className="py-2 border-b">Household</span>
+              <span className="py-2 border-b">Personal Care</span>
+              <span className="py-2 text-red-600">My Orders</span>
             </div>
           </div>
+        )}
+
+        {/* Categories navbar - desktop */}
+        <div className="hidden md:flex bg-white py-3 border-b justify-center space-x-8 lg:space-x-12">
+          <span className="cursor-pointer">Deals</span>
+          <span className="cursor-pointer">Food</span>
+          <span className="cursor-pointer">Beverages</span>
+          <span className="cursor-pointer">Household</span>
+          <span className="cursor-pointer">Personal Care</span>
+          <span className="cursor-pointer text-red-600">My Orders</span>
         </div>
       </div>
     </section>
