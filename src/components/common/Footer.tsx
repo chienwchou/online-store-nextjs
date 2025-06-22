@@ -201,7 +201,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="bg-white p-2 rounded">
                 <Image
-                  src={americanExpressIcon}
+                  src={discoverIcon}
                   alt="Discover"
                   width={40}
                   height={24}
