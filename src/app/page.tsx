@@ -16,6 +16,7 @@ import { useState } from "react";
 import freshBagel from "@/assets/fresh-bagel.png";
 import freshBread from "@/assets/flat-bread.png";
 import Image from "next/image";
+import SubscriptionBanner from "@/components/home/SubscriptionBanner";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -148,6 +149,7 @@ export default function Home() {
       <GroceryDeals />
       <PromotionalBanners />
       <MobileBanner />
+      <SubscriptionBanner />
       <Footer />
     </>
   );
