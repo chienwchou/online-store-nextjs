@@ -45,7 +45,7 @@ const Header: React.FC = () => {
             <input
               type="text"
               placeholder="Search a product e.g. milk"
-              className="w-full py-1 md:py-2 px-4 rounded-full text-black placeholder-white"
+              className="w-full py-1 md:py-2 px-4 rounded-full text-black placeholder-white outline-none"
             />
             <div className="absolute right-0 top-0 bg-gray-200 h-full rounded-r-full flex items-center px-4">
               <Search size={20} className="text-gray-600" />

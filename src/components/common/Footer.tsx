@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4">Menu</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/deals">Deals</Link>
+                <Link href="/product-listings">Deals</Link>
               </li>
               <li>
                 <Link href="/food">Food</Link>
