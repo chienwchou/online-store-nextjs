@@ -83,7 +83,7 @@ const GroceryFilter: React.FC<GroceryFilterProps> = ({
   };
 
   return (
-    <div className="w-64 bg-white border-r border-gray-200 p-6">
+    <div className="w-full bg-white border-r border-gray-200 p-6">
       <h2 className="text-lg font-medium text-gray-900 mb-6">Filter by</h2>
 
       {/* Category Section */}

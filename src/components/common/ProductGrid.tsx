@@ -1,3 +1,4 @@
+"use client";
 import { Minus, Plus } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
@@ -30,7 +31,7 @@ export default function ProductGrid({
   };
 
   return (
-    <div key={id} className="min-w-[300px] border rounded-md p-4 flex flex-col">
+    <div key={id} className="border rounded-md p-4 flex flex-col">
       <div className="relative">
         <div className="bg-red-600 text-white text-sm py-1 px-3 rounded-full absolute top-0 left-0">
           Best Deal
