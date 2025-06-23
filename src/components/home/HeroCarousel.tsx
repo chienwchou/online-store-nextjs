@@ -6,9 +6,13 @@ import coffeeBag from "@/assets/coffee-bag.png";
 import coffeeCup from "@/assets/coffee-cup.png";
 import { useEffect, useState } from "react";
 
+interface carouselType {
+  backgroundColor: string;
+}
+
 export default function HeroCarousel() {
   const [carouselIndex, setCarouselIndex] = useState(0);
-  const carousels = [
+  const carousels: carouselType[] = [
     {
       backgroundColor: "bg-amber-50",
     },
