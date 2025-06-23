@@ -9,6 +9,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,7 +20,9 @@ const Header: React.FC = () => {
         {/* Top navigation bar */}
         <div className="bg-red-900 text-white p-4 flex justify-between items-center flex-wrap">
           <div className="flex space-x-6 text-sm md:text-base">
-            <span className="cursor-pointer">About Us</span>
+            <Link href="/about-us" className="cursor-pointer">
+              About Us
+            </Link>
             <span className="cursor-pointer">Customer Support</span>
           </div>
           <div className="hidden md:flex items-center text-sm">
@@ -34,7 +37,9 @@ const Header: React.FC = () => {
 
         {/* Main header with search */}
         <div className="bg-red-600 text-white py-3 px-4 md:py-4 md:px-6 flex justify-between items-center">
-          <h1 className="text-2xl md:text-3xl font-bold">FreshMart.</h1>
+          <Link href="/" className="text-2xl md:text-3xl font-bold">
+            FreshMart.
+          </Link>
 
           <div className="hidden md:block relative w-1/3 mx-4">
             <input
