@@ -4,7 +4,7 @@ import freshBread from "@/assets/flat-bread.png";
 
 export default function HeroCarousel() {
   return (
-    <div className="flex flex-col w-full">
+    <section className="flex flex-col w-full">
       {/* Hero banner */}
       <div className="bg-amber-50 py-6 md:py-12 px-4 md:px-8 flex flex-col md:flex-row items-center justify-center">
         <div className="w-full md:w-1/3 flex justify-center items-center md:justify-end px-10">
@@ -41,6 +41,6 @@ export default function HeroCarousel() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
