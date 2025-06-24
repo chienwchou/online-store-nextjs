@@ -19,6 +19,7 @@ const ProductListingsSection: React.FC<ProductListingSectionProps> = ({
             .map((product, index) => {
               return (
                 <ProductGrid
+                  key={"deal" + index}
                   id={"deal" + index}
                   image={milk}
                   name={product.name}
