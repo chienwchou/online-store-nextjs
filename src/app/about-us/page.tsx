@@ -2,7 +2,6 @@ import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
 import aboutUsBanner from "@/assets/about-us-banner.png";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function AboutUs() {
   return (
