@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { FilterState } from "@/models/productListings";
+import styles from "./ProductFilter.module.css";
 
 interface GroceryFilterProps {
   onFilterChange?: (filters: FilterState) => void;
@@ -133,40 +134,25 @@ const GroceryFilter: React.FC<GroceryFilterProps> = ({
         {priceExpanded && (
           <div className="mt-4">
             <div className="px-3">
-              <div className="relative">
-                <input
-                  type="range"
-                  min={minPrice.toString()}
-                  max={maxPrice.toString()}
-                  value={priceRange[0]}
-                  onChange={(e) => handlePriceChange(e.target.value, 0)}
-                  className="absolute w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-                  style={{ zIndex: 1 }}
-                />
-                <input
-                  type="range"
-                  min={minPrice.toString()}
-                  max={maxPrice.toString()}
-                  value={priceRange[1]}
-                  onChange={(e) => handlePriceChange(e.target.value, 1)}
-                  className="absolute w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-                  style={{ zIndex: 2 }}
-                />
-                <div
-                  className="absolute h-2 bg-blue-600 rounded"
-                  style={{
-                    left: `${
-                      ((priceRange[0] - minPrice) / (maxPrice - minPrice)) * 100
-                    }%`,
-                    width: `${
-                      ((priceRange[1] - priceRange[0]) /
-                        (maxPrice - minPrice)) *
-                      100
-                    }%`,
-                    top: "0px",
-                    zIndex: 0,
-                  }}
-                />
+              <div className={styles.rangeContainer}>
+                <div className={styles.slidersControl}>
+                  <input
+                    className={`${styles.rangeInput} ${styles.fromSlider}`}
+                    type="range"
+                    min={minPrice.toString()}
+                    max={maxPrice.toString()}
+                    value={priceRange[0]}
+                    onChange={(e) => handlePriceChange(e.target.value, 0)}
+                  />
+                  <input
+                    className={styles.rangeInput}
+                    type="range"
+                    min={minPrice.toString()}
+                    max={maxPrice.toString()}
+                    value={priceRange[1]}
+                    onChange={(e) => handlePriceChange(e.target.value, 1)}
+                  />
+                </div>
               </div>
             </div>
 
