@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { FilterState } from "@/models/productListings";
 
 interface GroceryFilterProps {
   onFilterChange?: (filters: FilterState) => void;
@@ -8,11 +9,6 @@ interface GroceryFilterProps {
   initialPriceRange?: [number, number];
   minPrice?: number;
   maxPrice?: number;
-}
-
-interface FilterState {
-  selectedCategories: string[];
-  priceRange: [number, number];
 }
 
 const GroceryFilter: React.FC<GroceryFilterProps> = ({
@@ -101,7 +97,7 @@ const GroceryFilter: React.FC<GroceryFilterProps> = ({
         </button>
 
         {categoryExpanded && (
-          <div className="mt-4 space-y-3 max-h-80 overflow-y-auto">
+          <div className="mt-4 space-y-3 max-h-80 overflow-y-auto scroll">
             {categories.map((category) => (
               <label
                 key={category}

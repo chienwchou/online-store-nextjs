@@ -1,9 +1,18 @@
+import { FilterState } from "@/models/productListings";
 import ProductGrid from "../common/ProductGrid";
 import milk from "@/assets/products/milk.png";
+import { useState } from "react";
 
-export default function ProductListingsSection() {
+interface ProductListingSectionProps {
+  productListingState: FilterState;
+}
+
+const ProductListingsSection: React.FC<ProductListingSectionProps> = ({
+  productListingState,
+}) => {
   return (
     <>
+      {JSON.stringify(productListingState)}
       <section>
         <div className="p-10 grid grid-cols-4 gap-5">
           <ProductGrid
@@ -45,4 +54,6 @@ export default function ProductListingsSection() {
       </section>
     </>
   );
-}
+};
+
+export default ProductListingsSection;
