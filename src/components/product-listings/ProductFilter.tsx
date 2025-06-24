@@ -15,8 +15,8 @@ interface GroceryFilterProps {
 const GroceryFilter: React.FC<GroceryFilterProps> = ({
   onFilterChange,
   initialCategories = [],
-  initialPriceRange = [2, 27],
-  minPrice = 2,
+  initialPriceRange = [0, 27],
+  minPrice = 0,
   maxPrice = 27,
 }) => {
   const [categoryExpanded, setCategoryExpanded] = useState<boolean>(true);

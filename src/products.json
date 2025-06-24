@@ -1,0 +1,772 @@
+[
+  {
+    "categoryId": 0,
+    "category": "Babies",
+    "name": "Baby Diapers Size 2",
+    "originalPrice": 14.99,
+    "price": 14.08
+  },
+  {
+    "categoryId": 0,
+    "category": "Babies",
+    "name": "Baby Wipes Sensitive Skin",
+    "originalPrice": 12.82,
+    "price": 9.97
+  },
+  {
+    "categoryId": 0,
+    "category": "Babies",
+    "name": "Baby Formula - Stage 1",
+    "originalPrice": 27.98,
+    "price": 24.61
+  },
+  {
+    "categoryId": 0,
+    "category": "Babies",
+    "name": "Baby Shampoo",
+    "originalPrice": 14.65,
+    "price": 13.02
+  },
+  {
+    "categoryId": 0,
+    "category": "Babies",
+    "name": "Baby Food Pouches \u2013 Apple Banana",
+    "originalPrice": 6.13,
+    "price": 5.12
+  },
+  {
+    "categoryId": 1,
+    "category": "Bakery",
+    "name": "Sourdough Bread",
+    "originalPrice": 19.6,
+    "price": 17.11
+  },
+  {
+    "categoryId": 1,
+    "category": "Bakery",
+    "name": "Whole Wheat Buns",
+    "originalPrice": 24.06,
+    "price": 21.05
+  },
+  {
+    "categoryId": 1,
+    "category": "Bakery",
+    "name": "Croissants",
+    "originalPrice": 32.91,
+    "price": 24.89
+  },
+  {
+    "categoryId": 1,
+    "category": "Bakery",
+    "name": "Banana Muffins",
+    "originalPrice": 23.49,
+    "price": 17.84
+  },
+  {
+    "categoryId": 1,
+    "category": "Bakery",
+    "name": "Gluten-Free Bread",
+    "originalPrice": 8.23,
+    "price": 7.02
+  },
+  {
+    "categoryId": 2,
+    "category": "Beer",
+    "name": "IPA \u2013 6 Pack",
+    "originalPrice": 2.69,
+    "price": 2.25
+  },
+  {
+    "categoryId": 2,
+    "category": "Beer",
+    "name": "Lager \u2013 12 Pack",
+    "originalPrice": 4.5,
+    "price": 3.97
+  },
+  {
+    "categoryId": 2,
+    "category": "Beer",
+    "name": "Pale Ale \u2013 Local Craft",
+    "originalPrice": 8.39,
+    "price": 6.39
+  },
+  {
+    "categoryId": 2,
+    "category": "Beer",
+    "name": "Stout \u2013 4 Pack",
+    "originalPrice": 7.31,
+    "price": 5.58
+  },
+  {
+    "categoryId": 2,
+    "category": "Beer",
+    "name": "Light Beer \u2013 6 Pack",
+    "originalPrice": 14.33,
+    "price": 11.25
+  },
+  {
+    "categoryId": 3,
+    "category": "Beverages",
+    "name": "Coconut Water",
+    "originalPrice": 23.24,
+    "price": 20.2
+  },
+  {
+    "categoryId": 3,
+    "category": "Beverages",
+    "name": "Sparkling Water \u2013 Lime",
+    "originalPrice": 5.52,
+    "price": 4.5
+  },
+  {
+    "categoryId": 3,
+    "category": "Beverages",
+    "name": "Orange Juice \u2013 No Pulp",
+    "originalPrice": 17.75,
+    "price": 15.02
+  },
+  {
+    "categoryId": 3,
+    "category": "Beverages",
+    "name": "Cold Brew Coffee",
+    "originalPrice": 30.61,
+    "price": 28.84
+  },
+  {
+    "categoryId": 3,
+    "category": "Beverages",
+    "name": "Electrolyte Sports Drink",
+    "originalPrice": 28.53,
+    "price": 25.52
+  },
+  {
+    "categoryId": 4,
+    "category": "Cereals",
+    "name": "Honey Oats Cereal",
+    "originalPrice": 18.38,
+    "price": 15.61
+  },
+  {
+    "categoryId": 4,
+    "category": "Cereals",
+    "name": "Multigrain Flakes",
+    "originalPrice": 30.19,
+    "price": 23.43
+  },
+  {
+    "categoryId": 4,
+    "category": "Cereals",
+    "name": "Corn Flakes",
+    "originalPrice": 18.96,
+    "price": 17.93
+  },
+  {
+    "categoryId": 4,
+    "category": "Cereals",
+    "name": "Granola \u2013 Almond & Honey",
+    "originalPrice": 10.59,
+    "price": 8.76
+  },
+  {
+    "categoryId": 4,
+    "category": "Cereals",
+    "name": "Chocolate Puffs",
+    "originalPrice": 29.71,
+    "price": 27.61
+  },
+  {
+    "categoryId": 5,
+    "category": "Cereals & Snacks",
+    "name": "Trail Mix",
+    "originalPrice": 33.98,
+    "price": 27.24
+  },
+  {
+    "categoryId": 5,
+    "category": "Cereals & Snacks",
+    "name": "Cheese Crackers",
+    "originalPrice": 27.95,
+    "price": 25.49
+  },
+  {
+    "categoryId": 5,
+    "category": "Cereals & Snacks",
+    "name": "Fruit Snacks",
+    "originalPrice": 24.51,
+    "price": 22.21
+  },
+  {
+    "categoryId": 5,
+    "category": "Cereals & Snacks",
+    "name": "Energy Bars \u2013 Peanut Butter",
+    "originalPrice": 2.99,
+    "price": 2.56
+  },
+  {
+    "categoryId": 5,
+    "category": "Cereals & Snacks",
+    "name": "Pita Chips",
+    "originalPrice": 5.29,
+    "price": 4.3
+  },
+  {
+    "categoryId": 6,
+    "category": "Cleaning Supplies",
+    "name": "All-Purpose Cleaner",
+    "originalPrice": 17.93,
+    "price": 14.27
+  },
+  {
+    "categoryId": 6,
+    "category": "Cleaning Supplies",
+    "name": "Laundry Detergent \u2013 Unscented",
+    "originalPrice": 24.78,
+    "price": 22.03
+  },
+  {
+    "categoryId": 6,
+    "category": "Cleaning Supplies",
+    "name": "Glass Cleaner",
+    "originalPrice": 8.59,
+    "price": 7.01
+  },
+  {
+    "categoryId": 6,
+    "category": "Cleaning Supplies",
+    "name": "Dish Soap \u2013 Lemon",
+    "originalPrice": 10.26,
+    "price": 8.53
+  },
+  {
+    "categoryId": 6,
+    "category": "Cleaning Supplies",
+    "name": "Sponges \u2013 6 Pack",
+    "originalPrice": 21.68,
+    "price": 17.09
+  },
+  {
+    "categoryId": 7,
+    "category": "Coffee",
+    "name": "Ground Coffee \u2013 Medium Roast",
+    "originalPrice": 18.22,
+    "price": 15.74
+  },
+  {
+    "categoryId": 7,
+    "category": "Coffee",
+    "name": "Whole Bean \u2013 Dark Roast",
+    "originalPrice": 13.86,
+    "price": 12.14
+  },
+  {
+    "categoryId": 7,
+    "category": "Coffee",
+    "name": "Coffee Pods \u2013 Vanilla",
+    "originalPrice": 16.51,
+    "price": 15.44
+  },
+  {
+    "categoryId": 7,
+    "category": "Coffee",
+    "name": "Instant Coffee",
+    "originalPrice": 34.41,
+    "price": 29.61
+  },
+  {
+    "categoryId": 7,
+    "category": "Coffee",
+    "name": "Cold Brew Concentrate",
+    "originalPrice": 22.46,
+    "price": 17.46
+  },
+  {
+    "categoryId": 8,
+    "category": "Dairy & Eggs",
+    "name": "Whole Milk \u2013 2L",
+    "originalPrice": 10.48,
+    "price": 8.88
+  },
+  {
+    "categoryId": 8,
+    "category": "Dairy & Eggs",
+    "name": "Free-Range Eggs \u2013 Dozen",
+    "originalPrice": 9.61,
+    "price": 8.58
+  },
+  {
+    "categoryId": 8,
+    "category": "Dairy & Eggs",
+    "name": "Cheddar Cheese Block",
+    "originalPrice": 4.33,
+    "price": 3.76
+  },
+  {
+    "categoryId": 8,
+    "category": "Dairy & Eggs",
+    "name": "Greek Yogurt \u2013 Plain",
+    "originalPrice": 26.28,
+    "price": 24.49
+  },
+  {
+    "categoryId": 8,
+    "category": "Dairy & Eggs",
+    "name": "Butter \u2013 Salted",
+    "originalPrice": 16.25,
+    "price": 14.4
+  },
+  {
+    "categoryId": 9,
+    "category": "Fish & Seafood",
+    "name": "Salmon Fillets \u2013 Fresh",
+    "originalPrice": 27.25,
+    "price": 22.75
+  },
+  {
+    "categoryId": 9,
+    "category": "Fish & Seafood",
+    "name": "Frozen Shrimp \u2013 Peeled",
+    "originalPrice": 10.53,
+    "price": 9.32
+  },
+  {
+    "categoryId": 9,
+    "category": "Fish & Seafood",
+    "name": "Tuna \u2013 Canned in Water",
+    "originalPrice": 13.62,
+    "price": 11.25
+  },
+  {
+    "categoryId": 9,
+    "category": "Fish & Seafood",
+    "name": "Cod Loins \u2013 Skinless",
+    "originalPrice": 29.5,
+    "price": 24.94
+  },
+  {
+    "categoryId": 9,
+    "category": "Fish & Seafood",
+    "name": "Smoked Mackerel",
+    "originalPrice": 30.08,
+    "price": 22.97
+  },
+  {
+    "categoryId": 10,
+    "category": "Food",
+    "name": "Tomato Sauce",
+    "originalPrice": 26.59,
+    "price": 20.97
+  },
+  {
+    "categoryId": 10,
+    "category": "Food",
+    "name": "Peanut Butter \u2013 Smooth",
+    "originalPrice": 26.17,
+    "price": 22.32
+  },
+  {
+    "categoryId": 10,
+    "category": "Food",
+    "name": "Canned Beans \u2013 Black",
+    "originalPrice": 16.77,
+    "price": 15.71
+  },
+  {
+    "categoryId": 10,
+    "category": "Food",
+    "name": "Pickles \u2013 Dill",
+    "originalPrice": 18.62,
+    "price": 15.59
+  },
+  {
+    "categoryId": 10,
+    "category": "Food",
+    "name": "Chicken Broth",
+    "originalPrice": 10.13,
+    "price": 8.99
+  },
+  {
+    "categoryId": 11,
+    "category": "Fresh Finds",
+    "name": "Avocados \u2013 Organic",
+    "originalPrice": 17.15,
+    "price": 13.09
+  },
+  {
+    "categoryId": 11,
+    "category": "Fresh Finds",
+    "name": "Heirloom Tomatoes",
+    "originalPrice": 22.39,
+    "price": 17.99
+  },
+  {
+    "categoryId": 11,
+    "category": "Fresh Finds",
+    "name": "Microgreens \u2013 Assorted",
+    "originalPrice": 26.41,
+    "price": 22.54
+  },
+  {
+    "categoryId": 11,
+    "category": "Fresh Finds",
+    "name": "Local Honey",
+    "originalPrice": 30.98,
+    "price": 28.46
+  },
+  {
+    "categoryId": 11,
+    "category": "Fresh Finds",
+    "name": "Artisanal Cheese",
+    "originalPrice": 34.49,
+    "price": 29.82
+  },
+  {
+    "categoryId": 12,
+    "category": "Fruit",
+    "name": "Bananas",
+    "originalPrice": 7.08,
+    "price": 6.05
+  },
+  {
+    "categoryId": 12,
+    "category": "Fruit",
+    "name": "Strawberries \u2013 1 lb",
+    "originalPrice": 19.68,
+    "price": 17.54
+  },
+  {
+    "categoryId": 12,
+    "category": "Fruit",
+    "name": "Fuji Apples",
+    "originalPrice": 11.07,
+    "price": 9.31
+  },
+  {
+    "categoryId": 12,
+    "category": "Fruit",
+    "name": "Blueberries \u2013 Organic",
+    "originalPrice": 4.63,
+    "price": 3.56
+  },
+  {
+    "categoryId": 12,
+    "category": "Fruit",
+    "name": "Grapes \u2013 Seedless",
+    "originalPrice": 15.54,
+    "price": 11.99
+  },
+  {
+    "categoryId": 13,
+    "category": "Home & Kitchen",
+    "name": "Paper Towels \u2013 6 Pack",
+    "originalPrice": 6.26,
+    "price": 4.7
+  },
+  {
+    "categoryId": 13,
+    "category": "Home & Kitchen",
+    "name": "Aluminum Foil",
+    "originalPrice": 3.87,
+    "price": 3.22
+  },
+  {
+    "categoryId": 13,
+    "category": "Home & Kitchen",
+    "name": "Food Storage Containers",
+    "originalPrice": 2.92,
+    "price": 2.77
+  },
+  {
+    "categoryId": 13,
+    "category": "Home & Kitchen",
+    "name": "Trash Bags \u2013 Large",
+    "originalPrice": 24.42,
+    "price": 19.83
+  },
+  {
+    "categoryId": 13,
+    "category": "Home & Kitchen",
+    "name": "Reusable Water Bottles",
+    "originalPrice": 16.51,
+    "price": 13.08
+  },
+  {
+    "categoryId": 14,
+    "category": "Meat & Poultry",
+    "name": "Chicken Breast \u2013 Boneless",
+    "originalPrice": 12.9,
+    "price": 11.53
+  },
+  {
+    "categoryId": 14,
+    "category": "Meat & Poultry",
+    "name": "Ground Beef \u2013 Lean",
+    "originalPrice": 21.85,
+    "price": 18.59
+  },
+  {
+    "categoryId": 14,
+    "category": "Meat & Poultry",
+    "name": "Pork Chops",
+    "originalPrice": 17.42,
+    "price": 15.3
+  },
+  {
+    "categoryId": 14,
+    "category": "Meat & Poultry",
+    "name": "Turkey Sausages",
+    "originalPrice": 23.31,
+    "price": 19.21
+  },
+  {
+    "categoryId": 14,
+    "category": "Meat & Poultry",
+    "name": "Bacon \u2013 Thick Cut",
+    "originalPrice": 3.26,
+    "price": 2.99
+  },
+  {
+    "categoryId": 15,
+    "category": "Pastas & Grains",
+    "name": "Spaghetti \u2013 Whole Wheat",
+    "originalPrice": 22.27,
+    "price": 17.47
+  },
+  {
+    "categoryId": 15,
+    "category": "Pastas & Grains",
+    "name": "Brown Rice",
+    "originalPrice": 30.96,
+    "price": 23.32
+  },
+  {
+    "categoryId": 15,
+    "category": "Pastas & Grains",
+    "name": "Quinoa \u2013 Organic",
+    "originalPrice": 30.47,
+    "price": 27.36
+  },
+  {
+    "categoryId": 15,
+    "category": "Pastas & Grains",
+    "name": "Penne \u2013 Gluten-Free",
+    "originalPrice": 32.75,
+    "price": 27.07
+  },
+  {
+    "categoryId": 15,
+    "category": "Pastas & Grains",
+    "name": "Couscous",
+    "originalPrice": 12.34,
+    "price": 11.06
+  },
+  {
+    "categoryId": 16,
+    "category": "Personal Hygiene",
+    "name": "Toothpaste \u2013 Whitening",
+    "originalPrice": 33.65,
+    "price": 28.64
+  },
+  {
+    "categoryId": 16,
+    "category": "Personal Hygiene",
+    "name": "Shampoo \u2013 Herbal",
+    "originalPrice": 4.82,
+    "price": 4.15
+  },
+  {
+    "categoryId": 16,
+    "category": "Personal Hygiene",
+    "name": "Body Wash \u2013 Lavender",
+    "originalPrice": 32.1,
+    "price": 29.64
+  },
+  {
+    "categoryId": 16,
+    "category": "Personal Hygiene",
+    "name": "Deodorant \u2013 Aluminum-Free",
+    "originalPrice": 18.89,
+    "price": 16.16
+  },
+  {
+    "categoryId": 16,
+    "category": "Personal Hygiene",
+    "name": "Cotton Swabs \u2013 500 ct",
+    "originalPrice": 21.96,
+    "price": 17.26
+  },
+  {
+    "categoryId": 17,
+    "category": "Soft Drinks",
+    "name": "Cola \u2013 12 Pack",
+    "originalPrice": 29.57,
+    "price": 24.47
+  },
+  {
+    "categoryId": 17,
+    "category": "Soft Drinks",
+    "name": "Lemon Lime Soda",
+    "originalPrice": 14.32,
+    "price": 12.83
+  },
+  {
+    "categoryId": 17,
+    "category": "Soft Drinks",
+    "name": "Root Beer",
+    "originalPrice": 16.94,
+    "price": 14.77
+  },
+  {
+    "categoryId": 17,
+    "category": "Soft Drinks",
+    "name": "Tonic Water",
+    "originalPrice": 13.26,
+    "price": 11.12
+  },
+  {
+    "categoryId": 17,
+    "category": "Soft Drinks",
+    "name": "Ginger Ale",
+    "originalPrice": 14.51,
+    "price": 11.94
+  },
+  {
+    "categoryId": 18,
+    "category": "Start Your Cart",
+    "name": "White Bread",
+    "originalPrice": 25.32,
+    "price": 20.61
+  },
+  {
+    "categoryId": 18,
+    "category": "Start Your Cart",
+    "name": "Salted Butter",
+    "originalPrice": 20.37,
+    "price": 16.12
+  },
+  {
+    "categoryId": 18,
+    "category": "Start Your Cart",
+    "name": "Eggs \u2013 Large",
+    "originalPrice": 31.97,
+    "price": 26.14
+  },
+  {
+    "categoryId": 18,
+    "category": "Start Your Cart",
+    "name": "Orange Juice",
+    "originalPrice": 12.28,
+    "price": 10.6
+  },
+  {
+    "categoryId": 18,
+    "category": "Start Your Cart",
+    "name": "Bottled Water \u2013 12 Pack",
+    "originalPrice": 21.25,
+    "price": 16.82
+  },
+  {
+    "categoryId": 19,
+    "category": "Tea",
+    "name": "Green Tea \u2013 Organic",
+    "originalPrice": 15.26,
+    "price": 12.99
+  },
+  {
+    "categoryId": 19,
+    "category": "Tea",
+    "name": "Black Tea \u2013 Earl Grey",
+    "originalPrice": 21.32,
+    "price": 20.04
+  },
+  {
+    "categoryId": 19,
+    "category": "Tea",
+    "name": "Chamomile Tea",
+    "originalPrice": 13.97,
+    "price": 12.63
+  },
+  {
+    "categoryId": 19,
+    "category": "Tea",
+    "name": "Chai Tea \u2013 Spiced",
+    "originalPrice": 25.7,
+    "price": 23.83
+  },
+  {
+    "categoryId": 19,
+    "category": "Tea",
+    "name": "Matcha Powder \u2013 Culinary Grade",
+    "originalPrice": 20.46,
+    "price": 17.03
+  },
+  {
+    "categoryId": 20,
+    "category": "Vegetables",
+    "name": "Carrots \u2013 Organic",
+    "originalPrice": 32.09,
+    "price": 27.12
+  },
+  {
+    "categoryId": 20,
+    "category": "Vegetables",
+    "name": "Broccoli Crowns",
+    "originalPrice": 21.28,
+    "price": 19.23
+  },
+  {
+    "categoryId": 20,
+    "category": "Vegetables",
+    "name": "Zucchini",
+    "originalPrice": 13.05,
+    "price": 12.38
+  },
+  {
+    "categoryId": 20,
+    "category": "Vegetables",
+    "name": "Spinach \u2013 Bagged",
+    "originalPrice": 18.95,
+    "price": 14.63
+  },
+  {
+    "categoryId": 20,
+    "category": "Vegetables",
+    "name": "Red Bell Peppers",
+    "originalPrice": 9.05,
+    "price": 8.58
+  },
+  {
+    "categoryId": 21,
+    "category": "Wine",
+    "name": "Cabernet Sauvignon",
+    "originalPrice": 16.98,
+    "price": 15.83
+  },
+  {
+    "categoryId": 21,
+    "category": "Wine",
+    "name": "Chardonnay",
+    "originalPrice": 26.34,
+    "price": 20.04
+  },
+  {
+    "categoryId": 21,
+    "category": "Wine",
+    "name": "Pinot Noir",
+    "originalPrice": 26.25,
+    "price": 20.18
+  },
+  {
+    "categoryId": 21,
+    "category": "Wine",
+    "name": "Ros\u00e9 \u2013 Dry",
+    "originalPrice": 19.89,
+    "price": 18.73
+  },
+  {
+    "categoryId": 21,
+    "category": "Wine",
+    "name": "Sparkling Wine",
+    "originalPrice": 28.71,
+    "price": 23.92
+  }
+]

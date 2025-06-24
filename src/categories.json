@@ -1,0 +1,90 @@
+[
+  {
+    "id": 0,
+    "name": "Babies"
+  },
+  {
+    "id": 1,
+    "name": "Bakery"
+  },
+  {
+    "id": 2,
+    "name": "Beer"
+  },
+  {
+    "id": 3,
+    "name": "Beverages"
+  },
+  {
+    "id": 4,
+    "name": "Cereals"
+  },
+  {
+    "id": 5,
+    "name": "Cereals & Snacks"
+  },
+  {
+    "id": 6,
+    "name": "Cleaning Supplies"
+  },
+  {
+    "id": 7,
+    "name": "Coffee"
+  },
+  {
+    "id": 8,
+    "name": "Dairy & Eggs"
+  },
+  {
+    "id": 9,
+    "name": "Fish & Seafood"
+  },
+  {
+    "id": 10,
+    "name": "Food"
+  },
+  {
+    "id": 11,
+    "name": "Fresh Finds"
+  },
+  {
+    "id": 12,
+    "name": "Fruit"
+  },
+  {
+    "id": 13,
+    "name": "Home & Kitchen"
+  },
+  {
+    "id": 14,
+    "name": "Meat & Poultry"
+  },
+  {
+    "id": 15,
+    "name": "Pastas & Grains"
+  },
+  {
+    "id": 16,
+    "name": "Personal Hygiene"
+  },
+  {
+    "id": 17,
+    "name": "Soft Drinks"
+  },
+  {
+    "id": 18,
+    "name": "Start Your Cart"
+  },
+  {
+    "id": 19,
+    "name": "Tea"
+  },
+  {
+    "id": 20,
+    "name": "Vegetables"
+  },
+  {
+    "id": 21,
+    "name": "Wine"
+  }
+]
