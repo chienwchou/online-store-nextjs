@@ -12,6 +12,7 @@ const ProductListingsSection: React.FC<ProductListingSectionProps> = ({
 }) => {
   return (
     <>
+      {JSON.stringify(productListingState)}
       <section>
         <div className="p-10 grid grid-cols-4 gap-5">
           {products

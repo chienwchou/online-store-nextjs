@@ -1,4 +1,4 @@
 export interface FilterState {
-  selectedCategories: string[];
+  selectedCategories: number[];
   priceRange: [number, number];
 }

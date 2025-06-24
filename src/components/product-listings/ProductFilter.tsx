@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { FilterState } from "@/models/productListings";
 import styles from "./ProductFilter.module.css";
+import categories from "@/categories.json";
 
 interface GroceryFilterProps {
   onFilterChange?: (filters: FilterState) => void;
-  initialCategories?: string[];
+  initialCategories?: number[];
   initialPriceRange?: [number, number];
   minPrice?: number;
   maxPrice?: number;
@@ -22,36 +23,11 @@ const GroceryFilter: React.FC<GroceryFilterProps> = ({
   const [categoryExpanded, setCategoryExpanded] = useState<boolean>(true);
   const [priceExpanded, setPriceExpanded] = useState<boolean>(true);
   const [selectedCategories, setSelectedCategories] =
-    useState<string[]>(initialCategories);
+    useState<number[]>(initialCategories);
   const [priceRange, setPriceRange] =
     useState<[number, number]>(initialPriceRange);
 
-  const categories: string[] = [
-    "Babies",
-    "Bakery",
-    "Beer",
-    "Beverages",
-    "Cereals",
-    "Cereals & Snacks",
-    "Cleaning Supplies",
-    "Coffee",
-    "Dairy & Eggs",
-    "Fish & Seafood",
-    "Food",
-    "Fresh Finds",
-    "Fruit",
-    "Home & Kitchen",
-    "Meat & Poultry",
-    "Pastas & Grains",
-    "Personal Hygiene",
-    "Soft Drinks",
-    "Start Your Cart",
-    "Tea",
-    "Vegetables",
-    "Wine",
-  ];
-
-  const handleCategoryChange = (category: string): void => {
+  const handleCategoryChange = (category: number): void => {
     const newSelectedCategories = selectedCategories.includes(category)
       ? selectedCategories.filter((c) => c !== category)
       : [...selectedCategories, category];
@@ -101,16 +77,16 @@ const GroceryFilter: React.FC<GroceryFilterProps> = ({
           <div className="mt-4 space-y-3 max-h-80 overflow-y-auto scroll">
             {categories.map((category) => (
               <label
-                key={category}
+                key={category.id}
                 className="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-1 rounded"
               >
                 <input
                   type="checkbox"
-                  checked={selectedCategories.includes(category)}
-                  onChange={() => handleCategoryChange(category)}
+                  checked={selectedCategories.includes(category.id)}
+                  onChange={() => handleCategoryChange(category.id)}
                   className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
                 />
-                <span className="text-sm text-gray-700">{category}</span>
+                <span className="text-sm text-gray-700">{category.name}</span>
               </label>
             ))}
           </div>
