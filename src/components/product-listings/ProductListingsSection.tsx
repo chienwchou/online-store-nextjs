@@ -13,10 +13,24 @@ const ProductListingsSection: React.FC<ProductListingSectionProps> = ({
   return (
     <>
       {JSON.stringify(productListingState)}
-      <section>
+      <section className="md:min-h-[1000px]">
         <div className="p-10 grid grid-cols-4 gap-5">
           {products
             .filter((product) => product.sale)
+            .filter((product) => {
+              if (
+                productListingState.selectedCategories.length > 0 &&
+                productListingState.selectedCategories.includes(
+                  product.categoryId
+                )
+              ) {
+                return true;
+              }
+              if (productListingState.selectedCategories.length == 0) {
+                return true;
+              }
+              return false;
+            })
             .map((product, index) => {
               return (
                 <ProductGrid
