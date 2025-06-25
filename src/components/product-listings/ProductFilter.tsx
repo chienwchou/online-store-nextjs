@@ -45,6 +45,8 @@ const GroceryFilter: React.FC<GroceryFilterProps> = ({
   const handlePriceChange = (value: string, index: number): void => {
     const newRange: [number, number] = [...priceRange];
     newRange[index] = parseInt(value);
+
+    if (newRange[0] + 1 > newRange[1]) return;
     setPriceRange(newRange);
 
     if (onFilterChange) {

@@ -18,6 +18,7 @@ const ProductListingsSection: React.FC<ProductListingSectionProps> = ({
           {products
             .filter((product) => product.sale)
             .filter((product) => {
+              //filter by categories
               if (
                 productListingState.selectedCategories.length > 0 &&
                 productListingState.selectedCategories.includes(
@@ -27,6 +28,17 @@ const ProductListingsSection: React.FC<ProductListingSectionProps> = ({
                 return true;
               }
               if (productListingState.selectedCategories.length == 0) {
+                return true;
+              }
+              return false;
+            })
+            .filter((product) => {
+              //filter by price
+              if (
+                productListingState.priceRange.length > 0 &&
+                product.price >= productListingState.priceRange[0] &&
+                product.price <= productListingState.priceRange[1]
+              ) {
                 return true;
               }
               return false;
