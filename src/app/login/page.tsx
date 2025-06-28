@@ -7,12 +7,49 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function UserProfile() {
-  const [isLoginForm, setIsLoginForm] = useState(true);
-
+  const [isLoginForm, setIsLoginForm] = useState(false);
+  const [passwordMatch, setPasswordMatch] = useState(true);
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
+  const [registerData, setRegisterData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
   const { user, theme, setUser, setTheme, logout } = useApp();
 
-  const handleLogin = () => {
-    setUser({ name: "John Doe", email: "john@example.com" });
+  const handleFieldChange = (e, field) => {
+    const value = e.target.value;
+    const newFormData = { ...registerData, [field]: value };
+    setRegisterData(newFormData);
+  };
+
+  const handlePasswordChange = (e, field) => {
+    const value = e.target.value;
+    const newFormData = { ...registerData, [field]: value };
+    setRegisterData(newFormData);
+    if (
+      field === "confirmPassword" ||
+      (field === "password" && newFormData.confirmPassword)
+    ) {
+      setPasswordMatch(newFormData.password === newFormData.confirmPassword);
+    }
+  };
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    if (true) {
+      setUser({ name: "John Doe", email: "john@example.com" });
+    }
+  };
+
+  const handleRegistration = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
   };
 
   return (
@@ -27,7 +64,7 @@ export default function UserProfile() {
             <div className="relative flex bg-gray-200 mb-4 p-2 rounded-md">
               <button
                 onClick={() => setIsLoginForm(true)}
-                className={`flex-1 py-2 px-4 text-xl font-semibold transition-colors duration-200 border-r-1 ${
+                className={`flex-1 py-2 px-4 text-xl font-semibold transition-colors duration-200 ${
                   isLoginForm
                     ? "text-white"
                     : "text-gray-600 hover:text-gray-800"
@@ -35,9 +72,10 @@ export default function UserProfile() {
               >
                 LOGIN
               </button>
+              <div className="w-0.5 bg-black"></div>
               <button
                 onClick={() => setIsLoginForm(false)}
-                className={`flex-1 py-2 px-4 text-xl font-semibold transition-colors duration-200 border-l-1 ${
+                className={`flex-1 py-2 px-4 text-xl font-semibold transition-colors duration-200 ${
                   !isLoginForm
                     ? "text-white"
                     : "text-gray-600 hover:text-gray-800"
@@ -48,10 +86,7 @@ export default function UserProfile() {
             </div>
 
             {isLoginForm && (
-              <form
-                className="gap-y-6 flex flex-col w-full mb-2"
-                onSubmit={handleLogin}
-              >
+              <form className="gap-y-6 flex flex-col w-full mb-2">
                 <h2 className="font-semibold text-3xl">
                   Sign in for existing users
                 </h2>
@@ -81,7 +116,7 @@ export default function UserProfile() {
                   />
                 </div>
                 <button
-                  onClick={handleLogin}
+                  type="submit"
                   className="bg-blue-500 text-white px-4 py-2 rounded mr-2 w-full h-12"
                 >
                   LOGIN
@@ -102,7 +137,12 @@ export default function UserProfile() {
                     <input
                       id="first-name"
                       type="text"
-                      name="email"
+                      name="firstName"
+                      value={registerData.firstName}
+                      required
+                      onChange={(event) => {
+                        handleFieldChange(event, "firstName");
+                      }}
                       className="h-10 w-full bg-blue-100 border border-blue-300 rounded-md appearance-none p-4"
                     />
                   </div>
@@ -116,7 +156,12 @@ export default function UserProfile() {
                     <input
                       id="last-name"
                       type="text"
-                      name="email"
+                      name="lastName"
+                      value={registerData.lastName}
+                      required
+                      onChange={(event) => {
+                        handleFieldChange(event, "lastName");
+                      }}
                       className="h-10 w-full bg-blue-100 border border-blue-300 rounded-md appearance-none p-4"
                     />
                   </div>
@@ -129,6 +174,11 @@ export default function UserProfile() {
                     id="email"
                     type="text"
                     name="email"
+                    value={registerData.email}
+                    required
+                    onChange={(event) => {
+                      handleFieldChange(event, "email");
+                    }}
                     className="h-10 w-full bg-blue-100 border border-blue-300 rounded-md appearance-none p-4"
                   />
                 </div>
@@ -143,6 +193,11 @@ export default function UserProfile() {
                     id="password"
                     type="password"
                     name="password"
+                    value={registerData.password}
+                    required
+                    onChange={(event) => {
+                      handlePasswordChange(event, "password");
+                    }}
                     className="h-10 w-full bg-blue-100 border border-blue-300 rounded-md appearance-none p-4"
                   />
                 </div>
@@ -157,12 +212,36 @@ export default function UserProfile() {
                     id="confirm-password"
                     type="password"
                     name="confirmPassword"
+                    value={registerData.confirmPassword}
+                    required
+                    onChange={(event) => {
+                      handlePasswordChange(event, "confirmPassword");
+                    }}
                     className="h-10 w-full bg-blue-100 border border-blue-300 rounded-md appearance-none p-4"
                   />
                 </div>
+                {registerData.confirmPassword.length > 0 &&
+                  registerData.confirmPassword &&
+                  !passwordMatch && (
+                    <p className="mt-1 text-sm text-red-600">
+                      Passwords do not match
+                    </p>
+                  )}
+                {registerData.confirmPassword.length > 0 &&
+                  registerData.confirmPassword &&
+                  passwordMatch &&
+                  registerData.password && (
+                    <p className="mt-1 text-sm text-green-600">
+                      Passwords matched!
+                    </p>
+                  )}
                 <button
-                  onClick={handleLogin}
-                  className="bg-blue-500 text-white px-4 py-2 rounded mr-2 w-full h-12"
+                  onClick={handleRegistration}
+                  disabled={!passwordMatch}
+                  className={
+                    "text-white px-4 py-2 rounded mr-2 w-full h-12 " +
+                    (passwordMatch ? "bg-blue-500" : "bg-gray-500")
+                  }
                 >
                   Create account
                 </button>
