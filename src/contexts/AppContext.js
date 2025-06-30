@@ -15,6 +15,8 @@ const AppContext = createContext();
 // Reducer function
 function appReducer(state, action) {
   switch (action.type) {
+    case "CREATE_USER":
+      return {...state, user: action.payload};
     case "SET_USER":
       return { ...state, user: action.payload };
     case "SET_THEME":
@@ -28,6 +30,19 @@ function appReducer(state, action) {
   }
 }
 
+const createUserData = (userData, delay = 800) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      // Simulate loading additional user data
+      const returnedUserData = {
+        name: 'Bill',
+        email: 'chien.w.chou@gmail.com'
+      };
+      resolve(returnedUserData);
+    }, delay);
+  });
+};
+
 // Context Provider Component
 export function AppProvider({ children }) {
   const [state, dispatch] = useReducer(appReducer, initialState);
@@ -38,6 +53,24 @@ export function AppProvider({ children }) {
   const setLoading = (loading) =>
     dispatch({ type: "SET_LOADING", payload: loading });
   const logout = () => dispatch({ type: "LOGOUT" });
+  // Enhanced createUser action with fake HTTP request
+  const createUser = async (userData) => {
+    try {
+      // Fake API call to load additional user data
+      console.log("Loading user data...", userData);
+      const loggedInUser = await createUserData(userData);
+      
+      // Update user with complete data
+      dispatch({ type: "SET_USER", payload: loggedInUser });
+      
+      console.log("User created and loaded successfully:", loggedInUser);
+      return loggedInUser;
+      
+    } catch (error) {
+      console.error("Error creating user:", error);
+      throw error;
+    }
+  };
 
   const value = {
     ...state,
@@ -45,6 +78,7 @@ export function AppProvider({ children }) {
     setTheme,
     setLoading,
     logout,
+    createUser
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

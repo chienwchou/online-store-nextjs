@@ -20,16 +20,18 @@ export default function UserProfile() {
     password: "",
     confirmPassword: "",
   });
-  const { user, theme, setUser, setTheme, logout } = useApp();
+  const { user, theme, setUser, setTheme, logout, createUser } = useApp();
 
-  const handleFieldChange = (e, field) => {
-    const value = e.target.value;
+  const handleFieldChange = (e: Event, field: string) => {
+    const event = e.target as HTMLInputElement;
+    const value = event.value;
     const newFormData = { ...registerData, [field]: value };
     setRegisterData(newFormData);
   };
 
-  const handlePasswordChange = (e, field) => {
-    const value = e.target.value;
+  const handlePasswordChange = (e: Event, field: string) => {
+    const event = e.target as HTMLInputElement;
+    const value = event.value;
     const newFormData = { ...registerData, [field]: value };
     setRegisterData(newFormData);
     if (
@@ -47,9 +49,10 @@ export default function UserProfile() {
     }
   };
 
-  const handleRegistration = (event) => {
+  const handleRegistration = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     event.preventDefault();
+    createUser(registerData);
   };
 
   return (
