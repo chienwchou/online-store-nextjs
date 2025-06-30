@@ -6,14 +6,33 @@ import { useApp } from "@/contexts/AppContext";
 import Link from "next/link";
 import { useState } from "react";
 
+// Type definitions
+interface LoginData {
+  email: string;
+  password: string;
+}
+
+interface RegisterData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+}
+
+interface User {
+  name: string;
+  email: string;
+}
+
 export default function UserProfile() {
-  const [isLoginForm, setIsLoginForm] = useState(false);
-  const [passwordMatch, setPasswordMatch] = useState(true);
-  const [loginData, setLoginData] = useState({
+  const [isLoginForm, setIsLoginForm] = useState<boolean>(false);
+  const [passwordMatch, setPasswordMatch] = useState<boolean>(true);
+  const [loginData, setLoginData] = useState<LoginData>({
     email: "",
     password: "",
   });
-  const [registerData, setRegisterData] = useState({
+  const [registerData, setRegisterData] = useState<RegisterData>({
     firstName: "",
     lastName: "",
     email: "",
@@ -22,16 +41,20 @@ export default function UserProfile() {
   });
   const { user, theme, setUser, setTheme, logout, createUser } = useApp();
 
-  const handleFieldChange = (e: Event, field: string) => {
-    const event = e.target as HTMLInputElement;
-    const value = event.value;
+  const handleFieldChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    field: keyof RegisterData
+  ): void => {
+    const value = e.target.value;
     const newFormData = { ...registerData, [field]: value };
     setRegisterData(newFormData);
   };
 
-  const handlePasswordChange = (e: Event, field: string) => {
-    const event = e.target as HTMLInputElement;
-    const value = event.value;
+  const handlePasswordChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    field: keyof RegisterData
+  ): void => {
+    const value = e.target.value;
     const newFormData = { ...registerData, [field]: value };
     setRegisterData(newFormData);
     if (
@@ -42,17 +65,27 @@ export default function UserProfile() {
     }
   };
 
-  const handleLogin = (event) => {
+  const handleLogin = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
     if (true) {
       setUser({ name: "John Doe", email: "john@example.com" });
     }
   };
 
-  const handleRegistration = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleRegistration = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ): void => {
     event.stopPropagation();
     event.preventDefault();
     createUser(registerData);
+  };
+
+  const handleLoginFieldChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    field: keyof LoginData
+  ): void => {
+    const value = e.target.value;
+    setLoginData({ ...loginData, [field]: value });
   };
 
   return (
@@ -89,7 +122,10 @@ export default function UserProfile() {
             </div>
 
             {isLoginForm && (
-              <form className="gap-y-6 flex flex-col w-full mb-2">
+              <form
+                onSubmit={handleLogin}
+                className="gap-y-6 flex flex-col w-full mb-2"
+              >
                 <h2 className="font-semibold text-3xl">
                   Sign in for existing users
                 </h2>
@@ -99,8 +135,10 @@ export default function UserProfile() {
                   </label>
                   <input
                     id="email"
-                    type="text"
+                    type="email"
                     name="email"
+                    value={loginData.email}
+                    onChange={(e) => handleLoginFieldChange(e, "email")}
                     className="h-10 w-full bg-blue-100 border border-blue-300 rounded-md appearance-none p-4"
                   />
                 </div>
@@ -115,6 +153,8 @@ export default function UserProfile() {
                     id="password"
                     type="password"
                     name="password"
+                    value={loginData.password}
+                    onChange={(e) => handleLoginFieldChange(e, "password")}
                     className="h-10 w-full bg-blue-100 border border-blue-300 rounded-md appearance-none p-4"
                   />
                 </div>
@@ -175,7 +215,7 @@ export default function UserProfile() {
                   </label>
                   <input
                     id="email"
-                    type="text"
+                    type="email"
                     name="email"
                     value={registerData.email}
                     required
