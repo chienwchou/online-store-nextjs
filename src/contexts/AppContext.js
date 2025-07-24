@@ -16,7 +16,7 @@ const AppContext = createContext();
 function appReducer(state, action) {
   switch (action.type) {
     case "CREATE_USER":
-      return {...state, user: action.payload};
+      return { ...state, user: action.payload };
     case "SET_USER":
       return { ...state, user: action.payload };
     case "SET_THEME":
@@ -35,8 +35,8 @@ const createUserData = (userData, delay = 800) => {
     setTimeout(() => {
       // Simulate loading additional user data
       const returnedUserData = {
-        name: 'Bill',
-        email: 'chien.w.chou@gmail.com'
+        name: "Bill",
+        email: "chien.w.chou@gmail.com",
       };
       resolve(returnedUserData);
     }, delay);
@@ -48,7 +48,12 @@ export function AppProvider({ children }) {
   const [state, dispatch] = useReducer(appReducer, initialState);
 
   // Action creators
-  const setUser = (user) => dispatch({ type: "SET_USER", payload: user });
+  const setUser = async (user) => {
+    console.log("login...", user);
+    dispatch({ type: "SET_USER", payload: user });
+
+    console.log("User loaded successfully:", user);
+  };
   const setTheme = (theme) => dispatch({ type: "SET_THEME", payload: theme });
   const setLoading = (loading) =>
     dispatch({ type: "SET_LOADING", payload: loading });
@@ -59,13 +64,12 @@ export function AppProvider({ children }) {
       // Fake API call to load additional user data
       console.log("Loading user data...", userData);
       const loggedInUser = await createUserData(userData);
-      
+
       // Update user with complete data
       dispatch({ type: "SET_USER", payload: loggedInUser });
-      
+
       console.log("User created and loaded successfully:", loggedInUser);
       return loggedInUser;
-      
     } catch (error) {
       console.error("Error creating user:", error);
       throw error;
@@ -78,7 +82,7 @@ export function AppProvider({ children }) {
     setTheme,
     setLoading,
     logout,
-    createUser
+    createUser,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
