@@ -10,6 +10,7 @@ import {
   X,
 } from "lucide-react";
 import Link from "next/link";
+import ModalDemo from "./Modal";
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -106,6 +107,8 @@ const Header: React.FC = () => {
           <span className="cursor-pointer text-red-600">My Orders</span>
         </div>
       </div>
+
+      <ModalDemo />
     </section>
   );
 };
