@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { AppProvider } from "@/contexts/AppContext";
 
 import "./globals.css";
+import ModalDemo from "@/components/common/Modal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AppProvider>{children}</AppProvider>
+        <AppProvider>
+          {children} <ModalDemo />
+        </AppProvider>
       </body>
     </html>
   );

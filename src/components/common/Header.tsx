@@ -107,8 +107,6 @@ const Header: React.FC = () => {
           <span className="cursor-pointer text-red-600">My Orders</span>
         </div>
       </div>
-
-      <ModalDemo />
     </section>
   );
 };
