@@ -10,7 +10,6 @@ import {
   X,
 } from "lucide-react";
 import Link from "next/link";
-import ModalDemo from "./Modal";
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,8 +30,10 @@ const Header: React.FC = () => {
             <span className="ml-2 underline cursor-pointer">Details</span>
           </div>
           <div className="flex items-center text-sm md:text-base">
-            <User className="mr-2" size={18} />
-            <span className="cursor-pointer">Log in</span>
+            <Link href="/login" className="flex items-center">
+              <User className="mr-2" size={18} />
+              <span className="cursor-pointer">Log in</span>
+            </Link>
           </div>
         </div>
 
